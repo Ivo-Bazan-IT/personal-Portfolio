@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iván Bazán | Full-Stack Developer · Python / Node.js / TypeScript / React</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        hype: {
+                            bg: '#0a0a0a',
+                            card: '#161616',
+                            accent: '#D4FF00',
+                            accentHover: '#bce000',
+                            text: '#f3f4f6',
+                            muted: '#9ca3af'
+                        },
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Space Grotesk', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <link rel="stylesheet" href="src/assets/css/base.css">
+</head>
+<body class="font-sans antialiased selection:bg-hype-accent selection:text-black flex flex-col min-h-screen">
+
+    <!-- Navbar -->
+    <nav id="navbar" class="fixed w-full z-50 bg-hype-bg/90 backdrop-blur-md border-b border-white/5 cascade-item" style="animation-delay: 0.05s;">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <a href="#" class="font-display font-bold text-2xl tracking-tighter uppercase flex items-center gap-2">
+                    <span class="text-white">Hype</span><span class="text-hype-accent">Dev</span>
+                    <svg class="w-6 h-6 text-hype-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+                </a>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#about" class="text-hype-muted hover:text-white transition-colors px-3 py-2 text-sm font-medium">Intro</a>
+                        <a href="#skills" class="text-hype-muted hover:text-white transition-colors px-3 py-2 text-sm font-medium">Stack</a>
+                        <a href="#projects" onclick="event.preventDefault(); document.querySelector('.carousel-3d-wrapper').scrollIntoView({behavior:'smooth', block:'center'});" class="text-hype-muted hover:text-white transition-colors px-3 py-2 text-sm font-medium">Portfolio</a>
+                        <a href="#experience" class="text-hype-muted hover:text-white transition-colors px-3 py-2 text-sm font-medium">Experiencia</a>
+                        <a href="#contact" class="bg-hype-accent text-black hover:bg-hype-accentHover transition-colors px-5 py-2 rounded-sm text-sm font-bold uppercase tracking-wide">Contactar</a>
+                    </div>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-hype-muted hover:text-white focus:outline-none" aria-label="Menú">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-hype-card border-b border-white/5">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#about" class="text-hype-muted hover:text-white block px-3 py-2 rounded-md text-base font-medium">Intro</a>
+                <a href="#skills" class="text-hype-muted hover:text-white block px-3 py-2 rounded-md text-base font-medium">Stack</a>
+                <a href="#projects" class="text-hype-muted hover:text-white block px-3 py-2 rounded-md text-base font-medium">Portfolio</a>
+                <a href="#experience" class="text-hype-muted hover:text-white block px-3 py-2 rounded-md text-base font-medium">Experiencia</a>
+                <a href="#contact" class="text-hype-accent font-bold block px-3 py-2 rounded-md text-base">Contactar</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="flex-grow pt-20">
+        <!-- Hero -->
+        <section class="relative min-h-[90vh] flex items-center justify-center overflow-hidden cascade-item" style="animation-delay: 0.15s;">
+            <div class="absolute top-1/4 left-0 w-96 h-96 bg-hype-accent/5 rounded-full blur-3xl -z-10"></div>
+            <div class="absolute bottom-1/4 right-0 w-96 h-96 bg-hype-accent/10 rounded-full blur-3xl -z-10"></div>
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center lg:text-left flex flex-col lg:flex-row items-center gap-12">
+                <div class="w-full lg:w-3/5 space-y-8">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-hype-accent/30 bg-hype-accent/10 text-hype-accent text-xs font-bold uppercase tracking-widest mb-4">
+                        <span class="w-2 h-2 rounded-full bg-hype-accent animate-pulse"></span>
+                        Desarrollador Full-Stack / Node.js / TypeScript / React
+                    </div>
+                    <h1 class="font-display text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight leading-tight">
+                        Iván <span class="text-transparent bg-clip-text bg-gradient-to-r from-hype-accent to-white">Bazán</span>
+                    </h1>
+                    <p class="text-lg text-hype-muted max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+                        <span class="text-hype-accent">Full Stack Developer</span> con base sólida en <span class="text-hype-accent">backend</span> (Python / Node.js / TypeScript / Express.js) y desarrollo <span class="text-hype-accent">frontend con React</span>. Diseño <span class="text-hype-accent">APIs RESTful</span> escalables con autenticación JWT / OAuth, bases MongoDB / SQL y mentalidad de <span class="text-hype-accent">calidad QA</span> — código predecible, testeable y mantenible, con testing (Jest) y CI/CD.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <a href="#projects" onclick="event.preventDefault(); document.querySelector('.carousel-3d-wrapper')?.scrollIntoView({behavior:'smooth', block:'center'})" class="bg-hype-accent text-black font-bold uppercase tracking-wider py-4 px-8 rounded-sm hover:bg-hype-accentHover transition-all glow-accent">Ver Portfolio</a>
+                        <a href="https://github.com/Ivo-Bazan-IT" target="_blank" class="border border-white/20 text-white font-bold uppercase tracking-wider py-4 px-8 rounded-sm hover:bg-white/5 transition-all flex items-center justify-center gap-2">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path></svg>
+                            GitHub
+                        </a>
+                    </div>
+                </div>
+                <div class="w-full lg:w-2/5 flex justify-center">
+                    <div class="relative w-72 h-96 rounded-sm shadow-2xl transform rotate-3 hover:rotate-0 transition-transform duration-500 overflow-hidden bg-[url('src/assets/profile-image.jpeg')] bg-no-repeat" style="background-size: 150% 150%; background-position: center 35%; box-shadow: inset 0 0 0 1px rgba(255,255,255,0.1);"">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/60 to-transparent"></div>
+                        <div class="relative z-10 p-6 h-full flex flex-col justify-between">
+                        <div class="flex justify-between items-start">
+                            <div class="font-display font-bold text-4xl text-white/20">01</div>
+                            <div class="w-3 h-3 bg-hype-accent rounded-full animate-ping"></div>
+                        </div>
+                        <div class="space-y-4">
+                            <div class="h-2 w-full bg-white/10 rounded-full overflow-hidden"><div class="h-full bg-hype-accent w-3/4"></div></div>
+                            <div class="h-2 w-full bg-white/10 rounded-full overflow-hidden"><div class="h-full bg-hype-accent w-5/6"></div></div>
+                            <div class="h-2 w-full bg-white/10 rounded-full overflow-hidden"><div class="h-full bg-hype-accent w-1/2"></div></div>
+                        </div>
+                        <div>
+                            <p class="font-mono text-xs text-hype-accent mb-1">Iván Bazan</p>
+                            <p class="font-display font-bold text-xl uppercase">Full-Stack Developer</p>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills -->
+        <section id="skills" class="py-24 bg-hype-card border-y border-white/5 cascade-item" style="animation-delay: 0.3s;">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="mb-16 md:flex md:justify-between md:items-end">
+                    <div>
+                        <h2 class="font-display text-3xl md:text-5xl font-bold uppercase tracking-tight">Arsenal <span class="text-hype-accent">Tecnológico</span></h2>
+                        <p class="mt-4 text-hype-muted max-w-2xl">Las tecnologías fundamentales que utilizo para orquestar la lógica del servidor, gestionar datos a gran escala y construir interfaces eficientes.</p>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <article class="border border-white/10 bg-hype-bg p-8 rounded-sm hover:border-hype-accent/50 transition-colors">
+                        <div class="w-12 h-12 bg-hype-accent/10 flex items-center justify-center rounded-sm mb-6 text-hype-accent">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01"></path></svg>
+                        </div>
+                        <h3 class="font-display font-bold text-xl mb-4 uppercase">Back-End Core</h3>
+                        <ul class="space-y-3 text-hype-text">
+                            <li class="flex items-center"><span class="w-2 h-2 bg-hype-accent rounded-full mr-3"></span>Python / Django / FastAPI</li>
+                            <li class="flex items-center"><span class="w-2 h-2 bg-hype-accent rounded-full mr-3"></span>Node.js & Express.js</li>
+                            <li class="flex items-center"><span class="w-2 h-2 bg-hype-accent rounded-full mr-3"></span>TypeScript / APIs RESTful</li>
+                            <li class="flex items-center"><span class="w-2 h-2 bg-hype-accent rounded-full mr-3"></span>JWT · OAuth · Middleware de seguridad</li>
+                        </ul>
+                    </article>
+                    <article class="border border-white/10 bg-hype-bg p-8 rounded-sm hover:border-hype-accent/50 transition-colors">
+                        <div class="w-12 h-12 bg-hype-accent/10 flex items-center justify-center rounded-sm mb-6 text-hype-accent">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"></path></svg>
+                        </div>
+                        <h3 class="font-display font-bold text-xl mb-4 uppercase">Data & Infra</h3>
+                        <ul class="space-y-3 text-hype-text">
+                            <li class="flex items-center"><span class="w-2 h-2 bg-hype-accent rounded-full mr-3"></span>MongoDB (indexación, aggregation)</li>
+                            <li class="flex items-center"><span class="w-2 h-2 bg-hype-accent rounded-full mr-3"></span>SQL (modelado y consultas)</li>
+                            <li class="flex items-center"><span class="w-2 h-2 bg-hype-accent rounded-full mr-3"></span>GitHub Actions · CI/CD</li>
+                            <li class="flex items-center"><span class="w-2 h-2 bg-hype-accent rounded-full mr-3"></span>Postman · Chrome DevTools</li>
+                        </ul>
+                    </article>
+                    <article class="border border-white/10 bg-hype-bg p-8 rounded-sm hover:border-hype-accent/50 transition-colors">
+                        <div class="w-12 h-12 bg-hype-accent/10 flex items-center justify-center rounded-sm mb-6 text-hype-accent">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+                        </div>
+                        <h3 class="font-display font-bold text-xl mb-4 uppercase">Front-End</h3>
+                        <ul class="space-y-3 text-hype-text">
+                            <li class="flex items-center"><span class="w-2 h-2 bg-hype-accent rounded-full mr-3"></span>React · HTML5 · CSS3</li>
+                            <li class="flex items-center"><span class="w-2 h-2 bg-hype-accent rounded-full mr-3"></span>TypeScript</li>
+                            <li class="flex items-center"><span class="w-2 h-2 bg-hype-accent rounded-full mr-3"></span>Interfaces conectadas a API · Responsive / Mobile</li>
+                            <li class="flex items-center"><span class="w-2 h-2 bg-hype-accent rounded-full mr-3"></span>Tailwind CSS</li>
+                        </ul>
+                    </article>
+                    <article class="border border-white/10 bg-hype-bg p-8 rounded-sm hover:border-hype-accent/50 transition-colors">
+                        <div class="w-12 h-12 bg-hype-accent/10 flex items-center justify-center rounded-sm mb-6 text-hype-accent">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.053-.382-3.016z"></path></svg>
+                        </div>
+                        <h3 class="font-display font-bold text-xl mb-4 uppercase">Testing & QA</h3>
+                        <ul class="space-y-3 text-hype-text">
+                            <li class="flex items-center"><span class="w-2 h-2 bg-hype-accent rounded-full mr-3"></span>Jest · Testing Unitario e Integración</li>
+                            <li class="flex items-center"><span class="w-2 h-2 bg-hype-accent rounded-full mr-3"></span>CI/CD · GitHub Actions</li>
+                            <li class="flex items-center"><span class="w-2 h-2 bg-hype-accent rounded-full mr-3"></span>Cross-Browser · Mobile · Performance</li>
+                            <li class="flex items-center"><span class="w-2 h-2 bg-hype-accent rounded-full mr-3"></span>Documentación Técnica</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects -->
+        <section id="projects" class="py-36 min-h-[85vh] cascade-item" style="animation-delay: 0.45s;">
+            <div class="max-w-[90rem] mx-auto px-6 sm:px-10 lg:px-16">
+                <div class="mb-16">
+                    <h2 class="font-display text-3xl md:text-5xl font-bold uppercase tracking-tight">Registro de <span class="text-hype-accent">Proyectos</span></h2>
+                    <p class="mt-4 text-hype-muted max-w-2xl">Sistemas desarrollados con enfoque en escalabilidad, seguridad y rendimiento. Orientación principal al back-end.</p>
+                </div>
+                <div class="carousel-3d-wrapper relative py-12 md:py-20 px-12 md:px-24 lg:px-40">
+                    <div id="projects-carousel" class="carousel-track" style="transform-style: preserve-3d;">
+                        <!-- Project cards injected by ProjectCard -->
+                    </div>
+                    <div class="flex justify-center gap-3 mt-10">
+                        <button onclick="rotateCarousel(-1)" aria-label="Anterior" class="w-12 h-12 rounded-full border border-white/20 text-white hover:bg-hype-accent hover:text-black hover:border-hype-accent transition-all flex items-center justify-center">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+                        </button>
+                        <button onclick="rotateCarousel(1)" aria-label="Siguiente" class="w-12 h-12 rounded-full border border-white/20 text-white hover:bg-hype-accent hover:text-black hover:border-hype-accent transition-all flex items-center justify-center">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience -->
+        <section id="experience" class="py-24 bg-hype-card border-y border-white/5 cascade-item" style="animation-delay: 0.6s;">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="mb-16">
+                    <h2 class="font-display text-3xl md:text-5xl font-bold uppercase tracking-tight">Experiencia <span class="text-hype-accent">Profesional</span></h2>
+                    <p class="mt-4 text-hype-muted max-w-2xl">Trayectoria en desarrollo back-end, QA y proyectos freelance con enfoque en calidad, escalabilidad y entrega autónoma.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Experiencia 01 -->
+                    <div class="relative border border-white/10 bg-hype-bg p-8 rounded-sm shadow-2xl transform rotate-1 hover:rotate-0 transition-all duration-500 hover:shadow-[0_0_25px_rgba(212,255,0,0.35)] flex flex-col gap-6">
+                        <div class="flex justify-between items-start">
+                            <div class="font-display font-bold text-6xl text-white/10">01</div>
+                            <div class="w-3 h-3 bg-hype-accent rounded-full animate-ping"></div>
+                        </div>
+                        <div class="space-y-3">
+                            <div class="h-2 w-full bg-white/10 rounded-full overflow-hidden"><div class="h-full bg-hype-accent w-[92%]"></div></div>
+                            <div class="h-2 w-full bg-white/10 rounded-full overflow-hidden"><div class="h-full bg-hype-accent w-[78%]"></div></div>
+                            <div class="h-2 w-full bg-white/10 rounded-full overflow-hidden"><div class="h-full bg-hype-accent w-[65%]"></div></div>
+                        </div>
+                        <div>
+                            <p class="font-mono text-xs text-hype-accent mb-1">STATUS: ACTIVO · 2022 — PRESENTE</p>
+                            <h3 class="font-display font-bold text-2xl uppercase leading-tight">Freelance Full-Stack</h3>
+                            <p class="text-sm text-hype-muted mt-2">Desarrollo de APIs RESTful en Python (FastAPI) y Node.js / TypeScript, bases MongoDB, autenticación JWT y testing con Jest. Entrega remota y autónoma para clientes en Argentina y LATAM.</p>
+                            <a href="https://ventas.combisalacostasrl.com.ar/?_gl=1*f1wq10*_ga*MTIzODI2MTIyOC4xNzc5OTQzODcx*_ga_5JHTH0VN6P*czE3OTAwMDIzMzYkbzkkZzAkdDE3OTAwMDIzMzYkajYwJGwwJGgw" target="_blank" class="inline-flex items-center gap-2 mt-4 text-hype-accent hover:text-white transition-colors text-sm font-bold uppercase tracking-wide group">
+                                <span>Ver más</span>
+                                <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-hype-accent text-black transition-transform duration-300 group-hover:translate-x-1">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Experiencia 02 -->
+                    <div class="relative border border-white/10 bg-hype-bg p-8 rounded-sm shadow-2xl transform -rotate-1 hover:rotate-0 transition-all duration-500 hover:shadow-[0_0_25px_rgba(212,255,0,0.35)] flex flex-col gap-6">
+                        <div class="flex justify-between items-start">
+                            <div class="font-display font-bold text-6xl text-white/10">02</div>
+                            <div class="w-3 h-3 bg-hype-accent rounded-full animate-ping"></div>
+                        </div>
+                        <div class="space-y-3">
+                            <div class="h-2 w-full bg-white/10 rounded-full overflow-hidden"><div class="h-full bg-hype-accent w-[85%]"></div></div>
+                            <div class="h-2 w-full bg-white/10 rounded-full overflow-hidden"><div class="h-full bg-hype-accent w-[70%]"></div></div>
+                            <div class="h-2 w-full bg-white/10 rounded-full overflow-hidden"><div class="h-full bg-hype-accent w-[55%]"></div></div>
+                        </div>
+                        <div>
+                            <p class="font-mono text-xs text-hype-accent mb-1">STATUS: COMPLETADO · 2019 — 2022</p>
+                            <h3 class="font-display font-bold text-2xl uppercase leading-tight">QA & Testing Lead in SEOdigital</h3>
+                            <p class="text-sm text-hype-muted mt-2">Liderazgo en calidad de software: testing automatizado, CI/CD con GitHub Actions, validación cross-browser y documentación técnica. Base sólida que hoy respalda cada línea de código.</p>
+                            <a href="https://www.seodigital.net/" target="_blank" class="inline-flex items-center gap-2 mt-4 text-hype-accent hover:text-white transition-colors text-sm font-bold uppercase tracking-wide group">
+                                <span>Ver más</span>
+                                <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-hype-accent text-black transition-transform duration-300 group-hover:translate-x-1">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Experiencia 03 -->
+                    <div class="relative border border-white/10 bg-hype-bg p-8 rounded-sm shadow-2xl transform rotate-1 hover:rotate-0 transition-all duration-500 hover:shadow-[0_0_25px_rgba(212,255,0,0.35)] flex flex-col gap-6 md:col-span-3 lg:col-span-1">
+                        <div class="flex justify-between items-start">
+                            <div class="font-display font-bold text-6xl text-white/10">03</div>
+                            <div class="w-3 h-3 bg-hype-accent rounded-full animate-ping"></div>
+                        </div>
+                        <div class="space-y-3">
+                            <div class="h-2 w-full bg-white/10 rounded-full overflow-hidden"><div class="h-full bg-hype-accent w-[95%]"></div></div>
+                            <div class="h-2 w-full bg-white/10 rounded-full overflow-hidden"><div class="h-full bg-hype-accent w-[80%]"></div></div>
+                            <div class="h-2 w-full bg-white/10 rounded-full overflow-hidden"><div class="h-full bg-hype-accent w-[60%]"></div></div>
+                        </div>
+                        <div>
+                            <p class="font-mono text-xs text-hype-accent mb-1">STATUS: EN DESARROLLO</p>
+                            <h3 class="font-display font-bold text-2xl uppercase leading-tight">Back-End Core</h3>
+                            <p class="text-sm text-hype-muted mt-2">Especialización en Node.js / Express.js, TypeScript y desarrollo full-stack con APIs RESTful escalables, autenticación JWT / OAuth, MongoDB y SQL. Complemento con Python (Django / FastAPI) para back-end robusto y arquitectura limpia y mantenible.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact" class="py-24 bg-hype-accent text-black relative overflow-hidden cascade-item" style="animation-delay: 0.75s;">
+            <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#000_1px,transparent_1px)] [background-size:16px_16px]"></div>
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+                <h2 class="font-display text-4xl md:text-6xl font-bold uppercase tracking-tighter mb-6">¿Listo para escalar tu plataforma?</h2>
+                <p class="text-lg font-medium mb-10 max-w-2xl mx-auto opacity-80">
+                    Si buscas un creador de sistemas orientado a la eficiencia, seguridad y resolución de problemas técnicos complejos — con base en backend (Python / Node.js / TypeScript) y QA de calidad — hablemos. Trabajo 100% remoto, entrega limpia, sin micro-gestión.
+                </p>
+                <form id="contact-form" class="max-w-lg mx-auto bg-black/5 p-8 rounded-sm backdrop-blur-sm border border-black/10" onsubmit="event.preventDefault(); this.innerHTML='<p class=font-bold text-xl>¡Gracias, Iván Bazán está disponible para proyectos freelance! Contacto: bazan.ivan.angel@gmail.com · (011) 15-6455-8793 · Buenos Aires, Argentina · Trabajo 100% remoto</p>';">
+                    <div class="space-y-4">
+                        <input type="text" placeholder="Tu Nombre / Empresa" class="w-full bg-white/50 border border-black/20 focus:border-black focus:ring-1 focus:ring-black rounded-sm px-4 py-3 text-black placeholder-black/50 outline-none transition-all font-medium" required>
+                        <input type="email" placeholder="Email de Contacto" class="w-full bg-white/50 border border-black/20 focus:border-black focus:ring-1 focus:ring-black rounded-sm px-4 py-3 text-black placeholder-black/50 outline-none transition-all font-medium" required>
+                        <textarea id="contact-message" rows="4" placeholder="Háblame del proyecto o desafío técnico..." class="w-full bg-white/50 border border-black/20 focus:border-black focus:ring-1 focus:ring-black rounded-sm px-4 py-3 text-black placeholder-black/50 outline-none transition-all font-medium resize-none" required></textarea>
+                        <button type="submit" class="w-full bg-black text-hype-accent hover:bg-black/80 font-bold uppercase tracking-widest py-4 rounded-sm transition-colors mt-2 flex items-center justify-center gap-2">
+                            <span>Enviar Mensaje</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-hype-bg border-t border-white/5 py-12 cascade-item" style="animation-delay: 0.9s;">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="flex items-center gap-2">
+                <span class="font-display font-bold text-xl uppercase tracking-tighter"><span class="text-white">Iván</span><span class="text-hype-accent">Bazán</span></span>
+                <span class="text-hype-muted text-sm border-l border-white/20 pl-2 ml-2">Full Stack Developer · Python / Node.js / TypeScript · Buenos Aires, Argentina</span>
+            </div>
+            <div class="flex space-x-6">
+                <a href="#" class="text-hype-muted hover:text-hype-accent transition-colors" aria-label="LinkedIn"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></a>
+                <a href="https://github.com/Ivo-Bazan-IT" class="text-hype-muted hover:text-hype-accent transition-colors" aria-label="GitHub"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"/></svg></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Project Modal -->
+    <div id="project-modal" class="fixed inset-0 z-[100] hidden" role="dialog" aria-modal="true">
+        <div onclick="closeProjectModal()" class="absolute inset-0 bg-black/80 backdrop-blur-sm"></div>
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[92%] max-w-3xl bg-hype-card border border-white/10 rounded-lg overflow-hidden shadow-2xl shadow-hype-accent/20 transform scale-95 opacity-0 transition-all duration-300" id="project-modal-inner">
+            <button onclick="closeProjectModal()" aria-label="Cerrar" class="absolute top-4 right-4 w-10 h-10 rounded-full bg-hype-accent text-black font-bold hover:bg-white transition-colors flex items-center justify-center z-10">✕</button>
+            <div id="project-modal-content" class="p-6 md:p-8"></div>
+        </div>
+    </div>
+
+    <script type="module" src="src/main.js"></script>
+    <script>
+        let currentCarouselIndex = 0;
+        const cardCount = 4;
+        function rotateCarousel(dir) {
+            const wrappers = document.querySelectorAll('#projects-carousel > .carousel-card-wrapper');
+            if (!wrappers.length) return;
+            currentCarouselIndex = (currentCarouselIndex + dir + cardCount) % cardCount;
+            console.log('Rotando a índice:', currentCarouselIndex);
+            wrappers.forEach((w, i) => {
+                w.className = 'carousel-card-wrapper';
+                w.style.display = '';
+                const offset = (i - currentCarouselIndex + cardCount) % cardCount;
+                if (offset === 0) {
+                    w.classList.add('active-card');
+                } else if (offset === 1 || offset === cardCount - 1) {
+                    w.classList.add(offset === 1 ? 'side-card-right' : 'side-card-left');
+                } else {
+                    // Card oculta: se apila detrás respetando posición inicial
+                    w.classList.add('hidden-stacked');
+                }
+            });
+        }
+        window.openProjectModal = function(aEl) {
+            const raw = aEl.getAttribute('data-project-json');
+            if (!raw) return;
+            let data = {};
+            try { data = JSON.parse(decodeURIComponent(raw)); } catch(e) { return; }
+            const title = data.title || 'Proyecto';
+            const desc = data.description || '';
+            const tags = data.tags || [];
+            const linkUrl = (data.links && data.links.length > 0) ? data.links[0].url : '#';
+            const imgUrl = data.image || 'https://placehold.co/600x400/111111/D4FF00?text=Proyecto';
+            const tagsHtml = tags.map(t => `<span class="px-2 py-1 text-[10px] font-bold uppercase ${t.accent ? 'bg-hype-accent/10 text-hype-accent border border-hype-accent/20' : 'bg-white/5 text-hype-muted border border-white/10'}">${t.label}</span>`).join('');
+            const content = document.getElementById('project-modal-content');
+            content.innerHTML = `
+                <img src="${imgUrl}" alt="${title}" class="w-full h-64 md:h-80 object-cover rounded-md mb-6 border border-white/10">
+                <div class="flex flex-wrap gap-2 mb-4">${tagsHtml}</div>
+                <h3 class="font-display font-bold text-2xl md:text-3xl text-white mb-3">${title}</h3>
+                <p class="text-hype-muted text-base leading-relaxed mb-6">${desc}</p>
+                <a href="${linkUrl}" target="_blank" class="inline-flex items-center gap-2 bg-hype-accent text-black font-bold uppercase tracking-wide px-6 py-3 rounded-sm hover:bg-hype-accentHover transition-colors">
+                    Ver proyecto <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                </a>
+            `;
+            const modal = document.getElementById('project-modal');
+            const inner = document.getElementById('project-modal-inner');
+            modal.classList.remove('hidden');
+            requestAnimationFrame(() => { inner.classList.remove('scale-95', 'opacity-0'); inner.classList.add('scale-100', 'opacity-100'); });
+            document.body.style.overflow = 'hidden';
+        };
+        window.closeProjectModal = function() {
+            const modal = document.getElementById('project-modal');
+            const inner = document.getElementById('project-modal-inner');
+            inner.classList.remove('scale-100', 'opacity-100');
+            inner.classList.add('scale-95', 'opacity-0');
+            setTimeout(() => { modal.classList.add('hidden'); document.body.style.overflow = ''; }, 250);
+        };
+        document.getElementById('project-modal').addEventListener('click', function(e) { if (e.target === this) closeProjectModal(); });
+        document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeProjectModal(); });
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft') {
+                if (typeof window.rotateCarousel === 'function') window.rotateCarousel(-1);
+            } else if (e.key === 'ArrowRight') {
+                if (typeof window.rotateCarousel === 'function') window.rotateCarousel(1);
+            }
+        });
+        window.rotateCarousel = rotateCarousel;
+        // Initialize carousel with first card active (index 0)
+        document.addEventListener('DOMContentLoaded', () => {
+            setTimeout(() => {
+                const wrappers = document.querySelectorAll('#projects-carousel > .carousel-card-wrapper');
+                if (!wrappers.length) return;
+                currentCarouselIndex = 0;
+                wrappers.forEach((w, i) => {
+                    w.className = 'carousel-card-wrapper';
+                    w.style.display = '';
+                    if (i === 0) w.classList.add('active-card');
+                    else if (i === 1) w.classList.add('side-card-right');
+                    else if (i === 2) w.classList.add('side-card-left');
+                    else if (i > 2) w.classList.add('hidden-stacked');
+                });
+            }, 50);
+        });
+    </script>
+</body>
+</html>

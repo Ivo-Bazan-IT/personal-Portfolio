@@ -1,0 +1,54 @@
+--- Page 1 ---
+IVÁN BAZÁN
+Full Stack Developer · Go / Node.js / TypeScript / React
+“Backend sólido. Frontend funcional. Código que no da trabajo.”
+bazan.ivan.angel@gmail.com   ·   (011) 15-6455-8793   ·   Buenos Aires, Argentina   ·   Trabajo 100% remoto
+PERFIL PROFESIONAL
+Full Stack Developer con base sólida en backend (Go / Node.js / TypeScript / Express.js) y desarrollo frontend 
+con React. Diseño y construyo APIs RESTful escalables con autenticación JWT / OAuth, modelado de datos en 
+MongoDB y SQL, e interfaces en React conectadas a esas APIs. Mi diferencial: una mentalidad de calidad 
+heredada de años en QA — escribo código predecible, testeable y mantenible, con testing (Jest) e integración 
+continua (CI/CD) en GitHub Actions. Trabajo bajo metodologías ágiles, comunico con claridad técnica y 
+entrego de forma autónoma, sin supervisión constante.
+STACK TÉCNICO
+Lenguajes:  JavaScript · TypeScript · Go (Golang) · Python
+Backend:  Node.js · Express.js · APIs RESTful · JWT · OAuth · middleware de seguridad · arquitectura de servicios
+Frontend:  React · HTML5 · CSS3 · interfaces conectadas a API · diseño responsive / mobile
+Bases de datos:  MongoDB (indexación, aggregation) · SQL (modelado y consultas)
+Testing & CI/CD:  Jest · testing unitario y de integración · GitHub Actions · Git / GitHub
+Herramientas & metodología:  Postman · Chrome DevTools · documentación técnica · metodologías ágiles (Scrum) · 
+IA aplicada (Gemini API, agentes Claude / Ollama)
+EXPERIENCIA PROFESIONAL
+Backend Developer & QA Technical Lead  —  SEO Digital 2025
+2024 – 2026 · 1 año y 3 meses
+‣ Diseño de APIs REST: construí y mantuve endpoints escalables consumidos por el frontend, documentando 
+los contratos de API para el equipo de desarrollo.
+‣ Calidad y CI/CD: implementé una suite de tests automatizados (Jest) conectada a GitHub Actions, con 
+validación automática en cada PR antes del merge.
+‣ Integración de IA: incorporé agentes de IA al stack existente, acelerando un 23% el ciclo de entrega de 
+nuevas funcionalidades.
+‣ Colaboración técnica: convertí requerimientos de negocio en especificaciones técnicas accionables para el 
+equipo, reduciendo el re-trabajo en producción.
+Full Stack Developer  —  Proyectos Freelance
+Dic 2024 – Presente
+‣ Arquitectura backend: diseñé y desplegué APIs REST con Go, Node.js y TypeScript, incluyendo lógica de 
+suscripciones, autenticación JWT y middleware de seguridad.
+‣ Bases de datos: implementé estrategias de indexación en MongoDB que mejoraron los tiempos de respuesta 
+en endpoints de alto tráfico.
+‣ Frontend: construí interfaces en React conectadas a mis propias APIs, priorizando funcionalidad, UX limpia y 
+rendimiento en mobile.
+‣ Módulo de IA: lideré un módulo que automatiza la generación de contenido personalizado usando Gemini API 
+como motor.
+PROYECTOS DESTACADOS
+HypeWorkout — Portfolio full stack para entrenador online   hypeworkout.vercel.app
+Frontend en producción deployado en Vercel: formularios de contacto, sección de servicios y SEO básico. QA completo: 
+cross-browser, mobile y performance.
+Financial Market Bot — Análisis financiero en tiempo real   github.com/Ivo-Bazan-IT
+Backend en Python con integración a Telegram API. Procesa señales técnicas (Bollinger, RSI) en tiempo real, con lógica 
+de alertas, manejo de estado y validación de datos de mercado.
+EDUCACIÓN & CERTIFICACIONES
+‣ Tecnicatura Universitaria en Programación — Universidad Tecnológica Nacional (UTN) · Recibido
+‣ Arquitectura Backend & Node.js — Udemy · especialización (6 meses)
+‣ TypeScript Avanzado — Certificación de desarrollo tipado
+‣ Idiomas: Español (nativo) · Inglés B1–B2 (comunicación técnica)
+Disponible para proyectos freelance  ·  Entrega limpia, sin micro-gestión  ·  Trabajo 100% remoto
