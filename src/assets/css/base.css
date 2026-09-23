@@ -152,10 +152,10 @@ body {
 }
 
 /* ============================================================
-   CASCADE ENTRY ANIMATION
+   HERO KEYBOARD FADE
    ============================================================ */
 .hero-keyboard-fade {
-  animation: heroFadeIn 0.8s ease-in 0.5s forwards;
+  animation: heroFadeIn 0.8s ease-in-out 0.5s forwards;
   opacity: 0;
 }
 
@@ -168,9 +168,12 @@ body {
   }
 }
 
+/* ============================================================
+   CASCADE ENTRY ANIMATION
+   ============================================================ */
 .cascade-item {
-  animation: cascadeIn 0.8s ease-in 0.5s forwards;
-  opacity: 1;
+  animation: cascadeIn 0.8s ease-out forwards;
+  opacity: 0;
   transform: translateY(20px);
 }
 
@@ -183,4 +186,24 @@ body {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+/* ============================================================
+   EXPERIENCE CARD BACKGROUND (POO — clase reutilizable)
+   ============================================================ */
+.experience-card-bg {
+  position: relative;
+}
+.experience-card-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-image: url("../hype_dev_logo_card_vertical.png");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.2;
+  filter: blur(3px);
+  border-radius: inherit;
+  pointer-events: none;
 }
