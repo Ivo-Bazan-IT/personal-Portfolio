@@ -48,11 +48,11 @@ export class PortfolioApp {
 
         const data = [
             {
-                title: 'HypeWorkout — Portfolio Full Stack',
-                description: 'Portfolio full stack para entrenador online. Frontend en producción deployado en Vercel: formularios de contacto, sección de servicios y SEO básico. QA completo: cross-browser, mobile y performance.',
+                title: 'hype-workout trainers management',
+                description: 'CRM de microgestión mobile first para entrenadores que quieren gestionar todo su flujo de trabajo desde una única app.',
                 tags: [{ label: 'React', accent: true }, { label: 'TypeScript' }, { label: 'Python' }, { label: 'Node.js' }],
-                links: [{ text: 'Live Demo', url: 'https://hypeworkout.vercel.app/?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAcGRvZgJleHRuA2FlbQIxMQBzcnRjBmFwcF9pZA85MzY2MTk3NDMzOTI0NTkAAac_YpK1LGhvPxjDozF8Kd8behZaUN6cc71Cond50w6fkG59FtcyLyDuxbHLAg_aem_KMJPitS6hwPmUMT2PXE4bA', type: 'demo' }, { text: 'Repo', url: '#', type: 'repo' }],
-                image: 'src/assets/hype-workout-pic.png'
+                links: [{ text: 'Live Demo', url: 'https://hype-workout.vercel.app/', type: 'demo' }, { text: 'Repo', url: '#', type: 'repo' }],
+                image: 'src/assets/hype-logo.png'
             },
             {
                 title: 'Financial Market Bot — Bollinger & RSI',
