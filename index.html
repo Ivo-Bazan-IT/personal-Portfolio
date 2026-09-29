@@ -292,11 +292,12 @@
                 <p class="text-lg font-medium mb-10 max-w-2xl mx-auto opacity-80">
                     Si buscas un creador de sistemas orientado a la eficiencia, seguridad y resolución de problemas técnicos complejos — con base en backend (Python / Node.js / TypeScript) y QA de calidad — hablemos. Trabajo 100% remoto, entrega limpia, sin micro-gestión.
                 </p>
-                <form id="contact-form" class="max-w-lg mx-auto bg-black/5 p-8 rounded-sm backdrop-blur-sm border border-black/10" onsubmit="event.preventDefault(); this.innerHTML='<p class=font-bold text-xl>¡Gracias, Iván Bazán está disponible para proyectos freelance! Contacto: bazan.ivan.angel@gmail.com · (011) 15-6455-8793 · Buenos Aires, Argentina · Trabajo 100% remoto</p>';">
+                <form id="contact-form" class="max-w-lg mx-auto bg-black/5 p-8 rounded-sm backdrop-blur-sm border border-black/10">
+                    <input type="checkbox" name="botcheck" class="hidden" style="display: none;" tabindex="-1" autocomplete="off">
                     <div class="space-y-4">
-                        <input type="text" placeholder="Tu Nombre / Empresa" class="w-full bg-white/50 border border-black/20 focus:border-black focus:ring-1 focus:ring-black rounded-sm px-4 py-3 text-black placeholder-black/50 outline-none transition-all font-medium" required>
-                        <input type="email" placeholder="Email de Contacto" class="w-full bg-white/50 border border-black/20 focus:border-black focus:ring-1 focus:ring-black rounded-sm px-4 py-3 text-black placeholder-black/50 outline-none transition-all font-medium" required>
-                        <textarea id="contact-message" rows="4" placeholder="Háblame del proyecto o desafío técnico..." class="w-full bg-white/50 border border-black/20 focus:border-black focus:ring-1 focus:ring-black rounded-sm px-4 py-3 text-black placeholder-black/50 outline-none transition-all font-medium resize-none" required></textarea>
+                        <input type="text" name="name" placeholder="Tu Nombre / Empresa" class="w-full bg-white/50 border border-black/20 focus:border-black focus:ring-1 focus:ring-black rounded-sm px-4 py-3 text-black placeholder-black/50 outline-none transition-all font-medium" required>
+                        <input type="email" name="email" placeholder="Email de Contacto" class="w-full bg-white/50 border border-black/20 focus:border-black focus:ring-1 focus:ring-black rounded-sm px-4 py-3 text-black placeholder-black/50 outline-none transition-all font-medium" required>
+                        <textarea id="contact-message" name="message" rows="4" placeholder="Háblame del proyecto o desafío técnico..." class="w-full bg-white/50 border border-black/20 focus:border-black focus:ring-1 focus:ring-black rounded-sm px-4 py-3 text-black placeholder-black/50 outline-none transition-all font-medium resize-none" required></textarea>
                         <button type="submit" class="w-full bg-black text-hype-accent hover:bg-black/80 font-bold uppercase tracking-widest py-4 rounded-sm transition-colors mt-2 flex items-center justify-center gap-2">
                             <span>Enviar Mensaje</span>
                         </button>

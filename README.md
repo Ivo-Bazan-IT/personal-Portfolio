@@ -27,7 +27,7 @@ Portfolio-dev-propio/
 │   ├── components/
 │   │   ├── Navigation.js          # Navbar fijo + menú móvil + scroll
 │   │   ├── ProjectCard.js          # Render dinámico de proyectos
-│   │   └── ContactForm.js          # Formulario con validación visual
+│   │   └── ContactForm.js          # Formulario con envío por mail (Web3Forms)
 │   ├── assets/
 │   │   ├── css/
 │   │   │   └── base.css           # Estilos base y utilidades
@@ -44,7 +44,7 @@ Portfolio-dev-propio/
 | `BaseComponent` | Abstracción con selectores, eventos y ciclo de render |
 | `Navigation` | Menú fijo, navegación por scroll y menú responsive |
 | `ProjectCard` | Inyección dinámica de datos de proyectos en el DOM |
-| `ContactForm` | Validación visual y manejo de envío simulado |
+| `ContactForm` | Validación visual y envío real por mail vía Web3Forms |
 | `PortfolioApp` | Orquestador que instancia todos los componentes |
 
 ---
